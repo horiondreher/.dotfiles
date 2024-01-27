@@ -1,0 +1,7 @@
+# Alacritty
+
+alacritty/.config/alacritty/themes/*
+!alacritty/.config/alacritty/themes/tokyo-night.yaml
+
+# Neovim
+nvim/.config/nvim/plugin/packer_compiled.lua
