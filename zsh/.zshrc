@@ -116,12 +116,20 @@ if [ -x "$(command -v colorls)" ]; then
 fi
 
 alias vim="nvim"
-export TERM=xterm-256color
 
-# alias code="code-insiders"
-export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
-export CPLUS_INCLUDE_PATH=/usr/include/c++/11:/usr/include/x86_64-linux-gnu/c++/11
+export TERM=xterm-256color
+# export GO_PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
+# export PATH="$PATH:$GO_PATH"
+# export CPLUS_INCLUDE_PATH=/usr/include/c++/11:/usr/include/x86_64-linux-gnu/c++/11
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/horiondreher/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
