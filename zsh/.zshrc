@@ -117,12 +117,14 @@ fi
 
 alias vim="nvim"
 alias tmuxr="tmux resize-pane -R 70"
+alias git-rm-merged="git branch --merged | grep -Ev \"(^\*|main|homolog)\" | xargs git branch -d"
+alias python="python3"
 
 export TERM=xterm-256color
 export GO_PATH="/usr/local/go/bin"
+export GO_LOCAL_PATH="$HOME/go/bin"
 export LOCAL_PATH="$HOME/.local/bin"
-export PATH="$PATH:$GO_PATH:$LOCAL_PATH"
-# export CPLUS_INCLUDE_PATH=/usr/include/c++/11:/usr/include/x86_64-linux-gnu/c++/11
+export PATH="$PATH:$GO_PATH:$GO_LOCAL_PATH:$LOCAL_PATH" # export CPLUS_INCLUDE_PATH=/usr/include/c++/11:/usr/include/x86_64-linux-gnu/c++/11
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

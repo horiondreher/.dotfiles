@@ -1,0 +1,21 @@
+[core]
+	editor = code --wait
+	fsmonitor = true
+	pager = delta
+[init]
+	defaultBranch = main
+[merge]
+	conflictstyle = zdiff3
+[push]
+	autoSetupRemote = true
+[rerere]
+	enabled = true
+[diff]
+	algorithm = histogram
+	submodule = log
+[status]
+	submoduleSummary = true
+[submodule]
+	recurse = true
+[branch]
+	sort = -committerdate
