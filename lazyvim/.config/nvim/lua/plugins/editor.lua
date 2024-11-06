@@ -137,6 +137,20 @@ return {
 				end,
 				desc = "Open File Browser with the path of the current buffer",
 			},
+			{
+				"su",
+				function()
+					local telescope = require("telescope")
+					telescope.extensions.undo.undo({
+						side_by_side = true,
+						layout_strategy = "vertical",
+						layout_config = {
+							preview_height = 0.8,
+						},
+					})
+				end,
+				desc = "Open telescope undo",
+			},
 		},
 		config = function(_, opts)
 			local telescope = require("telescope")
