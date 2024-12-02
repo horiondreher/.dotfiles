@@ -7,13 +7,14 @@ return {
 				hsl_color = {
 					pattern = "hsl%(%d+,? %d+%%?,? %d+%%?%)",
 					group = function(_, match)
-						local utils = require("tokyonight.hsluv")
+						local utils = require("catppuccin.hsluv")
 						--- @type string, string, string
 						local nh, ns, nl = match:match("hsl%((%d+),? (%d+)%%?,? (%d+)%%?%)")
 						--- @type number?, number?, number?
 						local h, s, l = tonumber(nh), tonumber(ns), tonumber(nl)
 						--- @type string
 						local hex_color = utils.hslToHex(h, s, l)
+
 						return MiniHipatterns.compute_hex_color_group(hex_color, "bg")
 					end,
 				},
@@ -55,17 +56,6 @@ return {
 				desc = "Find Plugin File",
 			},
 			{
-				";f",
-				function()
-					local builtin = require("telescope.builtin")
-					builtin.find_files({
-						no_ignore = false,
-						hidden = true,
-					})
-				end,
-				desc = "Lists files in your current working directory, respects .gitignore",
-			},
-			{
 				";r",
 				function()
 					local builtin = require("telescope.builtin")
@@ -82,38 +72,6 @@ return {
 					builtin.buffers()
 				end,
 				desc = "Lists open buffers",
-			},
-			{
-				";t",
-				function()
-					local builtin = require("telescope.builtin")
-					builtin.help_tags()
-				end,
-				desc = "Lists available help tags and opens a new window with the relevant help info on <cr>",
-			},
-			{
-				";;",
-				function()
-					local builtin = require("telescope.builtin")
-					builtin.resume()
-				end,
-				desc = "Resume the previous telescope picker",
-			},
-			{
-				";e",
-				function()
-					local builtin = require("telescope.builtin")
-					builtin.diagnostics()
-				end,
-				desc = "Lists Diagnostics for all open buffers or a specific buffer",
-			},
-			{
-				";s",
-				function()
-					local builtin = require("telescope.builtin")
-					builtin.treesitter()
-				end,
-				desc = "Lists Function names, variables, from Treesitter",
 			},
 			{
 				"sf",
@@ -145,7 +103,7 @@ return {
 						side_by_side = true,
 						layout_strategy = "vertical",
 						layout_config = {
-							preview_height = 0.8,
+							preview_height = 0.6,
 						},
 					})
 				end,
