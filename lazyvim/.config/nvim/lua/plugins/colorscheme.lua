@@ -1,15 +1,10 @@
 return {
 	{
-		"folke/tokyonight.nvim",
-		opts = {
-			style = "night",
-		},
-	},
-	{
 		"catppuccin/nvim",
-		opts = {
-			flavour = "mocha",
-		},
+		name = "catppuccin",
+		config = function()
+			require("catppuccin").setup({})
+		end,
 	},
 	{
 		"LazyVim/LazyVim",
