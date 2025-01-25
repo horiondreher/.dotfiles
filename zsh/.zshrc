@@ -149,8 +149,6 @@ zsh_meli="$HOME/.zsh_meli"
 
 if [ -f "$zsh_meli" ]; then
   source "$zsh_meli"
-else
-  echo "File $script_path does not exist."
 fi
 
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
