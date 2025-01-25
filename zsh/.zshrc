@@ -129,9 +129,9 @@ alias git-rm-merged="git branch --merged | grep -Ev \"(^\*|main|homolog|develop)
 alias python="python3"
 
 export TERM=xterm-256color
-export GOPATH="$HOME/go"
-export LOCAL_PATH="$HOME/.local/bin"
-export PATH="$PATH:$GOPATH:$LOCAL_PATH"
+export GO_BIN_PATH="$HOME/go/bin"
+export GO_BIN_PATH_LOCAL="/usr/local/go/bin"
+export PATH="$PATH:$GO_BIN_PATH:$GO_BIN_PATH_LOCAL"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
