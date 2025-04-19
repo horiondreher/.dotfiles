@@ -1,0 +1,9 @@
+font-family = FiraCode Nerd Font Mono
+font-style-bold = Bold
+
+font-thicken
+bold-is-bright = true
+
+theme = catppuccin-mocha
+confirm-close-surface = false
+macos-option-as-alt = left

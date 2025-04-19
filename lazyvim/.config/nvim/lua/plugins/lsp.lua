@@ -6,12 +6,12 @@ return {
 			vim.list_extend(opts.ensure_installed, {
 				"stylua",
 				"selene",
-				"luacheck",
+
 				"shellcheck",
 				"shfmt",
-				"tailwindcss-language-server",
+
 				"typescript-language-server",
-				"css-lsp",
+
 				"gopls",
 				"goimports",
 				"gofumpt",
@@ -19,6 +19,7 @@ return {
 				"golangci-lint",
 				"impl",
 				"delve",
+
 				"pyright",
 			})
 		end,
