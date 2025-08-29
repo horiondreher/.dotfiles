@@ -115,9 +115,8 @@ if [ -x "$(command -v colorls)" ]; then
     alias la="colorls -al"
 fi
 
-_fix_cursor() {
-   echo -ne '\e[5 q'
-}
+_fix_cursor() { echo -ne '\e[5 q' }
+dedup_path() { PATH="$(print -l ${(s/:/)PATH} | awk '!x[$0]++' | paste -sd: -)"; }
 
 precmd_functions+=(_fix_cursor)
 
@@ -132,6 +131,7 @@ export TERM=xterm-256color
 export GO_BIN_PATH="$HOME/go/bin"
 export GO_BIN_PATH_LOCAL="/usr/local/go/bin"
 export PATH="$PATH:$GO_BIN_PATH:$GO_BIN_PATH_LOCAL"
+# export GITHUB_TOKEN=$(gh auth token)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -152,3 +152,5 @@ if [ -f "$zsh_meli" ]; then
 fi
 
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+dedup_path
