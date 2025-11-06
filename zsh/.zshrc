@@ -146,11 +146,11 @@ esac
 # pnpm end
 
 zsh_meli="$HOME/.zsh_meli"
-
 if [ -f "$zsh_meli" ]; then
   source "$zsh_meli"
 fi
 
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+eval "$(zoxide init zsh)"
 
 dedup_path

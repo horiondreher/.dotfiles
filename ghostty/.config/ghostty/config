@@ -6,7 +6,8 @@ bold-is-bright = true
 cursor-invert-fg-bg
 minimum-contrast = 1.05
 
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
+
 confirm-close-surface = false
 macos-option-as-alt = left
 

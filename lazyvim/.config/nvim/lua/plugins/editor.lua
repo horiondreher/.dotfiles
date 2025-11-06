@@ -38,6 +38,7 @@ return {
 			opts.sections.lualine_c[4] = { "filename", path = 1 }
 		end,
 	},
+
 	{
 		"zaucy/mcos.nvim",
 		dependencies = {
