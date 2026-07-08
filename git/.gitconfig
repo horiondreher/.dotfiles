@@ -24,3 +24,6 @@
 	recurse = true
 [branch]
 	sort = -committerdate
+[user]
+	email = horiondreher@gmail.com
+	name = Horion Dreher

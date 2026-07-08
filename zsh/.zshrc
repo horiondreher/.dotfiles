@@ -128,9 +128,10 @@ alias git-rm-merged="git branch --merged | grep -Ev \"(^\*|main|homolog|develop)
 alias python="python3"
 
 export TERM=xterm-256color
+export BIN_PATH_LOCAL="$HOME/.local/bin"
 export GO_BIN_PATH="$HOME/go/bin"
 export GO_BIN_PATH_LOCAL="/usr/local/go/bin"
-export PATH="$PATH:$GO_BIN_PATH:$GO_BIN_PATH_LOCAL"
+export PATH="$PATH:$BIN_PATH_LOCAL:$GO_BIN_PATH:$GO_BIN_PATH_LOCAL"
 # export GITHUB_TOKEN=$(gh auth token)
 
 export NVM_DIR="$HOME/.nvm"
