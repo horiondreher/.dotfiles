@@ -1,5 +1,5 @@
 return {
-  "NeogitOrg/neogit",
+  "NeogitOrg/neogit",  -- falta esse
   dependencies = {
     "nvim-lua/plenary.nvim",
     "sindrets/diffview.nvim",

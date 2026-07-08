@@ -18,7 +18,7 @@ return {
 
   -- Go forward/backward with square brackets
   {
-    "nvim-mini/mini.bracketed",
+    "nvim-mini/mini.bracketed", 
     event = "BufReadPost",
     config = function()
       local bracketed = require("mini.bracketed")
@@ -34,7 +34,7 @@ return {
 
   {
     {
-      "f-person/git-blame.nvim",
+      "f-person/git-blame.nvim",  -- falta esse
       event = "VeryLazy",
       opts = {
         enabled = true,
@@ -83,7 +83,7 @@ return {
   },
 
   {
-    "folke/which-key.nvim",
+    "folke/which-key.nvim",  -- falta esse
     opts = {
       spec = {
         { "<leader>gb", group = "git blame" },
